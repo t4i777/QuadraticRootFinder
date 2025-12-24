@@ -32,6 +32,11 @@ document.getElementById("mySubmit").onclick = function() {
         realPart = parseFloat(realPart);
         let complexPart = Number(Math.sqrt(Math.abs(discriminant)) / (2 * a)).toFixed(digits);
         complexPart = parseFloat(complexPart);
+        if (realPart == 0) {
+            document.getElementById("x1").innerHTML = `x<sub>1</sub> = -${complexPart}i`;
+            document.getElementById("x2").innerHTML = `x<sub>2</sub> = ${complexPart}i`;
+            return;
+        }
         document.getElementById("x1").innerHTML = `x<sub>1</sub> = ${realPart} - ${complexPart}i`;
         document.getElementById("x2").innerHTML = `x<sub>2</sub> = ${realPart} + ${complexPart}i`;
         return;
