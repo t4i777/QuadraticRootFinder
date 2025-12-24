@@ -22,6 +22,7 @@ document.getElementById("mySubmit").onclick = function() {
 
     if (a == 0) {
         document.getElementById("x1").textContent = "Not a quadratic!";
+        document.getElementById("x2").textContent = "";
         return;
     }
     
