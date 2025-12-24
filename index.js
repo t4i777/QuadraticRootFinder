@@ -33,17 +33,18 @@ document.getElementById("mySubmit").onclick = function() {
         realPart = parseFloat(realPart);
         let complexPart = Number(Math.sqrt(Math.abs(discriminant)) / (2 * a)).toFixed(digits);
         complexPart = parseFloat(complexPart);
-        if (realPart == 0) {
+
+        if (realPart == 0 && complexPart == 1) {
+            document.getElementById("x1").innerHTML = `x<sub>1</sub> = -i`;
+            document.getElementById("x2").innerHTML = `x<sub>2</sub> = i`;
+            return;
+        } else if (realPart == 0) {
             document.getElementById("x1").innerHTML = `x<sub>1</sub> = -${complexPart}i`;
             document.getElementById("x2").innerHTML = `x<sub>2</sub> = ${complexPart}i`;
             return;
         } else if (complexPart == 1) {
             document.getElementById("x1").innerHTML = `x<sub>1</sub> = ${realPart} - i`;
             document.getElementById("x2").innerHTML = `x<sub>2</sub> = ${realPart} + i`;
-            return;
-        } else if (realPart == 0 && complexPart == 1) {
-            document.getElementById("x1").innerHTML = `x<sub>1</sub> = -i`;
-            document.getElementById("x2").innerHTML = `x<sub>2</sub> = i`;
             return;
         }
         document.getElementById("x1").innerHTML = `x<sub>1</sub> = ${realPart} - ${complexPart}i`;
