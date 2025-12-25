@@ -1,42 +1,107 @@
+Here is a full CSS file you can paste into style.css to give your app a clean centered card look:
+
+css
+/* Global styles */
+* {
+    box-sizing: border-box;
+}
+
 body {
-    font-family: "georgia";
+    margin: 0;
+    padding: 0;
+    font-family: "Georgia", serif;
+    background-color: #f4f5f7;
 }
 
-h1 {
+/* Center the main card */
+#page {
+    max-width: 700px;
+    margin: 5rem auto;
+    padding: 3rem;
+    background-color: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #d0d0d0;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+/* Heading */
+#page h1 {
     text-align: center;
+    font-size: 2.4rem;
+    margin: 0 0 2rem 0;
 }
 
-h5 {
-    text-align: center;
-    font-weight: bold;
-}
-
-button {
-    margin: auto;
-    display: block;
-}
-
+/* Inputs container */
 #inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+/* Labels and inputs */
+#inputs label {
+    font-size: 1.1rem;
+    margin-right: 0.5rem;
+}
+
+#inputs input {
+    width: 220px;
+    padding: 0.4rem 0.5rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    border: 1px solid #bbb;
+}
+
+/* Put label and input on one line */
+#inputs label,
+#inputs input {
+    display: inline-block;
+}
+
+/* Button */
+#mySubmit {
+    margin: 1.5rem auto 0 auto;
+    display: block;
+    padding: 0.5rem 1.4rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    border: 1px solid #444;
+    background-color: #222;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.15s ease, transform 0.1s ease;
+}
+
+#mySubmit:hover {
+    background-color: #333;
+    transform: translateY(-1px);
+}
+
+#mySubmit:active {
+    transform: translateY(0);
+}
+
+/* Results */
+#x1,
+#x2 {
     text-align: center;
+    font-size: 1.2rem;
+    margin-top: 1rem;
 }
 
-p {
-    text-align: center;
-}
+/* Small screens */
+@media (max-width: 600px) {
+    #page {
+        margin: 2rem 1rem;
+        padding: 2rem;
+    }
 
-#page{
-    max-width: 500px;
-    margin: 2em auto;
-    padding: 2em;
-    border: 1px solid black;
-    border-radius: 10px;
-    font-size: 1.1em; 
-}
+    #page h1 {
+        font-size: 2rem;
+    }
 
-#page h1,
-#page label,
-#page input,
-#page button,
-#page p {
-    font-size: 1.2em;  
+    #inputs input {
+        width: 100%;
+    }
 }
