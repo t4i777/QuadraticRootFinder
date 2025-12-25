@@ -1,6 +1,3 @@
-Here is a full CSS file you can paste into style.css to give your app a clean centered card look:
-
-css
 /* Global styles */
 * {
     box-sizing: border-box;
@@ -9,7 +6,7 @@ css
 body {
     margin: 0;
     padding: 0;
-    font-family: "Georgia", serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     background-color: #f4f5f7;
 }
 
