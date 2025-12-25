@@ -32,3 +32,11 @@ p {
     border-radius: 10px;
     font-size: 1.1em; 
 }
+
+#page h1,
+#page label,
+#page input,
+#page button,
+#page p {
+    font-size: 1.2em;  
+}
